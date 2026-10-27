@@ -1,0 +1,26 @@
+{
+  "name": "markdown-slash-menu",
+  "displayName": "Markdown Slash Menu",
+  "description": "Меню по символу «/» в Markdown-файлах: жирный, таблицы, зачёркнутый, списки, callout'ы и всё остальное.",
+  "version": "0.1.0",
+  "publisher": "XZERON0",
+  "license": "MIT",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Snippets", "Other"],
+  "keywords": ["markdown", "slash", "menu", "snippets", "notion"],
+  "activationEvents": ["onLanguage:markdown"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "mdSlash.insertTable",
+        "title": "Markdown Slash: Вставить таблицу…"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        { "command": "mdSlash.insertTable", "when": "editorLangId == markdown" }
+      ]
+    }
+  }
+}
